@@ -1,70 +1,113 @@
-# Getting Started with Create React App
+# LOSFER - Campus Lost & Found System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Find What’s Lost. Return What’s Found.**
 
-## Available Scripts
+LOSFER is a modern, secure, and community-driven web application designed exclusively for students to report and recover lost items on campus. It solves the chaos of lost items by providing a centralized digital platform with smart search, real-time alerts, and secure claims.
 
-In the project directory, you can run:
+## Demo
 
-### `npm start`
+* Live Demo: https://losfer.vercel.app 
+* Best viewed on desktop for full experience.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Screenshots
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<h3>Landing Page</h3>
+<img src="screenshots/Screenshot%20(815).png" width="950">
 
-### `npm test`
+<h3>How It Works</h3>
+<img src="screenshots/Screenshot%20(816).png" width="950">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h3>Sign Up</h3>
+<img src="screenshots/Screenshot%20(817).png" width="950">
 
-### `npm run build`
+<h3>Dashboard</h3>
+<img src="screenshots/Screenshot%20(818).png" width="950">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<h3>Item Verification</h3>
+<img src="screenshots/Screenshot%20(820).png" width="950">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<h3>Items Feed</h3>
+<img src="screenshots/Screenshot%20(821).png" width="950">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<h3>Community Guidelines</h3>
+<img src="screenshots/Screenshot%20(822).png" width="950">
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Key Features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+*   **Smart Search:** Quickly find items using keywords, categories, or date filters.
+*   **AI-Powered Recognition:** Upload an image of a found item, and our AI (TensorFlow.js) automatically tags and categorizes it.
+*   **Secure Claims:** Claim items securely using unique questions or proof of ownership.
+*   **QR Code Integration:** Generate specific QR codes for items to streamline the return process.
+*   **Community Trust:** Built-in "Trust Score" system to identify reliable finders and verify claims.
+*   **Real-time Notifications:** Get alerted immediately when someone finds your lost item or claims an item you found.
+*   **Privacy First:** built with strict privacy controls to keep student data safe.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Tech Stack
 
-## Learn More
+*   **Frontend:** React.js (Vite/CRA), Tailwind CSS
+*   **Backend / Cloud:** Firebase (Auth, Firestore, Storage)
+*   **AI / ML:** TensorFlow.js, NSFWJS (Content moderation)
+*   **Utilities:** `html5-qrcode` (Scanning), `jspdf` (Reports), `react-router-dom`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Installation & Setup
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/yourusername/losfer.git
+    cd losfer
+    ```
 
-### Code Splitting
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3.  **Environment Setup**
+    Create a `.env.local` file in the root directory and add your Firebase credentials:
+    ```env
+    REACT_APP_FIREBASE_API_KEY=your_api_key
+    REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
+    REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+    REACT_APP_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+    REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+    REACT_APP_FIREBASE_APP_ID=your_app_id
+    ```
 
-### Analyzing the Bundle Size
+4.  **Run the application**
+    ```bash
+    npm start
+    ```
+    The app will open at `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Mobile App (Coming Soon)
 
-### Making a Progressive Web App
+We are currently working on a mobile version of LOSFER using **Capacitor**, which will bring:
+*   Native Camera support for faster scanning.
+*   Push notifications directly to your phone.
+*   Offline access to recent listings.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contributing
 
-### Advanced Configuration
+This project is built for the students, by the students. If you'd like to contribute:
+1.  Fork the repo.
+2.  Create a feature branch (`git checkout -b feature/amazing-feature`).
+3.  Commit your changes (`git commit -m 'Add amazing feature'`).
+4.  Push to the branch (`git push origin feature/amazing-feature`).
+5.  Open a Pull Request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## License
 
-### Deployment
+This project is licensed under the MIT License - see the `LICENSE` file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* **For support, feedback, or collaboration inquiries:**
+* **Email: campuslosfer@gmail.com**
+
+## Why LOSFER
+
+LOSFER is not just a lost and found system. It is a trust-based digital platform that reduces item loss anxiety, encourages honest behavior, and strengthens campus communities through technology.
