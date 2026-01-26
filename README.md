@@ -4,9 +4,37 @@
 
 LOSFER is a modern, secure, and community-driven web application designed exclusively for students to report and recover lost items on campus. It solves the chaos of lost items by providing a centralized digital platform with smart search, real-time alerts, and secure claims.
 
+## Demo
+
+* Live Demo: https://losfer.vercel.app 
+* Best viewed on desktop for full experience.
+
+## Screenshots
+
+<h3>Landing Page</h3>
+<img src="screenshots/Screenshot%20(815).png" width="950">
+
+<h3>How It Works</h3>
+<img src="screenshots/Screenshot%20(816).png" width="950">
+
+<h3>Sign Up</h3>
+<img src="screenshots/Screenshot%20(817).png" width="950">
+
+<h3>Dashboard</h3>
+<img src="screenshots/Screenshot%20(818).png" width="950">
+
+<h3>Item Verification</h3>
+<img src="screenshots/Screenshot%20(820).png" width="950">
+
+<h3>Items Feed</h3>
+<img src="screenshots/Screenshot%20(821).png" width="950">
+
+<h3>Community Guidelines</h3>
+<img src="screenshots/Screenshot%20(822).png" width="950">
 
 
-## 🚀 Key Features
+
+## Key Features
 
 *   **Smart Search:** Quickly find items using keywords, categories, or date filters.
 *   **AI-Powered Recognition:** Upload an image of a found item, and our AI (TensorFlow.js) automatically tags and categorizes it.
@@ -16,14 +44,14 @@ LOSFER is a modern, secure, and community-driven web application designed exclus
 *   **Real-time Notifications:** Get alerted immediately when someone finds your lost item or claims an item you found.
 *   **Privacy First:** built with strict privacy controls to keep student data safe.
 
-## 🛠 Tech Stack
+## Tech Stack
 
 *   **Frontend:** React.js (Vite/CRA), Tailwind CSS
 *   **Backend / Cloud:** Firebase (Auth, Firestore, Storage)
 *   **AI / ML:** TensorFlow.js, NSFWJS (Content moderation)
 *   **Utilities:** `html5-qrcode` (Scanning), `jspdf` (Reports), `react-router-dom`
 
-## 📦 Installation & Setup
+## Installation & Setup
 
 1.  **Clone the repository**
     ```bash
@@ -53,14 +81,14 @@ LOSFER is a modern, secure, and community-driven web application designed exclus
     ```
     The app will open at `http://localhost:3000`.
 
-## 📱 Mobile App (Coming Soon)
+## Mobile App (Coming Soon)
 
 We are currently working on a mobile version of LOSFER using **Capacitor**, which will bring:
 *   Native Camera support for faster scanning.
 *   Push notifications directly to your phone.
 *   Offline access to recent listings.
 
-## 🤝 Contributing
+## Contributing
 
 This project is built for the students, by the students. If you'd like to contribute:
 1.  Fork the repo.
@@ -69,10 +97,17 @@ This project is built for the students, by the students. If you'd like to contri
 4.  Push to the branch (`git push origin feature/amazing-feature`).
 5.  Open a Pull Request.
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the `LICENSE` file for details.
 
 ---
 
-**Contact:** campuslosfer@gmail.com
+## Contact
+
+* **For support, feedback, or collaboration inquiries:**
+* **Email: campuslosfer@gmail.com**
+
+## Why LOSFER
+
+LOSFER is not just a lost and found system. It is a trust-based digital platform that reduces item loss anxiety, encourages honest behavior, and strengthens campus communities through technology.
