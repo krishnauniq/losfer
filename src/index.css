@@ -1,13 +1,242 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Brand Colors */
+    --color-primary-50: 238 242 255;
+    --color-primary-100: 224 231 255;
+    --color-primary-200: 199 210 254;
+    --color-primary-300: 165 180 252;
+    --color-primary-400: 129 140 248;
+    --color-primary-500: 99 102 241;
+    --color-primary-600: 79 70 229;
+    --color-primary-700: 67 56 202;
+    --color-primary-800: 55 48 163;
+    --color-primary-900: 49 46 129;
+    --color-primary-950: 30 27 75;
+
+    /* Secondary Accent Colors */
+    --color-secondary-50: 253 242 248;
+    --color-secondary-100: 252 231 243;
+    --color-secondary-200: 251 207 232;
+    --color-secondary-300: 249 168 212;
+    --color-secondary-400: 244 114 182;
+    --color-secondary-500: 236 72 153;
+    --color-secondary-600: 219 39 119;
+    --color-secondary-700: 190 24 93;
+    --color-secondary-800: 157 23 77;
+    --color-secondary-900: 131 24 67;
+
+    /* Surface / Neutral Colors (Premium Soft Cloud) */
+    --color-surface-50: 247 249 252;
+    --color-surface-100: 241 243 246;
+    --color-surface-200: 226 230 236;
+    --color-surface-300: 203 210 217;
+    --color-surface-400: 148 158 168;
+    --color-surface-500: 100 110 120;
+    --color-surface-600: 71 80 90;
+    --color-surface-700: 51 60 70;
+    --color-surface-800: 30 38 48;
+    --color-surface-900: 15 20 28;
+    --color-surface-950: 2 4 10;
+
+    /* Functional Colors */
+    --color-success-500: 16 185 129;
+    --color-warning-500: 245 158 11;
+    --color-error-500: 239 68 68;
+
+    /* Document Background */
+    --bg-app: var(--color-surface-50);
+    --text-app: var(--color-surface-900);
+  }
+
+  .dark {
+    /* Clean Dark Mode (Slate based) */
+    --color-surface-50: 15 23 42;
+    --color-surface-100: 30 41 59;
+    --color-surface-200: 51 65 85;
+    --color-surface-300: 71 85 105;
+    --color-surface-400: 100 116 139;
+    --color-surface-500: 148 163 184;
+    --color-surface-600: 203 213 225;
+    --color-surface-700: 226 232 240;
+    --color-surface-800: 241 245 249;
+    --color-surface-900: 248 250 252;
+    --color-surface-950: 255 255 255;
+
+    --bg-app: 15 23 42;
+    --text-app: 248 250 252;
+  }
+
+  body {
+    @apply font-sans antialiased text-surface-900 bg-surface-50;
+    font-feature-settings: "cv11", "ss01";
+  }
+
+  .dark body {
+    @apply bg-surface-50 text-surface-900;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display tracking-tight text-surface-900;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer utilities {
+  .animate-pulse-slow {
+    animation: pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+
+  @keyframes pulse {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: .5;
+    }
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes bounce-slow {
+
+    0%,
+    100% {
+      transform: translateY(-5%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+
+    50% {
+      transform: translateY(0);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+
+  .animate-bounce-slow {
+    animation: bounce-slow 3s infinite;
+  }
+
+  @keyframes gradient-xy {
+
+    0%,
+    100% {
+      background-size: 400% 400%;
+      background-position: left top;
+    }
+
+    50% {
+      background-size: 200% 200%;
+      background-position: right bottom;
+    }
+  }
+
+  .animate-gradient-xy {
+    animation: gradient-xy 15s ease infinite;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Hide Scrollbar Utility */
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+}
+
+@layer components {
+  .btn-premium {
+    @apply relative px-6 py-3 rounded-xl font-bold transition-all duration-300 transform hover:-translate-y-0.5 active:scale-[0.98] shadow-sm hover:shadow-lg;
+  }
+
+  .card-premium {
+    @apply bg-white dark:bg-surface-100 border border-surface-200 dark:border-surface-200/50 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--color-surface-300));
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(var(--color-surface-400));
 }
